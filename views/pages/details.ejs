@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke details</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+ <header>   <h1> Details Page </h1>
+    <ul> 
+        <a href="/"> <li>Home</li> </a> 
+        <a href="favoriteJokes"> <li>Favorite jokes</li> </a> 
+        <a href="/randomJoke"> <li> Random Joke</li> </a> 
+    
+    </ul>
+</header>
+<main> 
+    <div class="joke-container">
+        <h3> <%= data.type%> </h3>
+        <h4> <%= data.setup %> </h4>
+        <h4> <%=data.punchline%> </h4>
+     <form action="/updateTheJoke/<%=data.id%>?_method=PUT" method="POST">
+       <input type="text" name="type" value="<%=data.type%>">
+       <input type="text" name="setup" value="<%=data.setup%>">
+       <input type="text" name="punchline" value="<%=data.punchline%>">
+    <input type="submit" value="Update">
+   </form>
+   <form action="/delete/<%=data.id%>?_method=delete" method="POST">
+     <input type="submit" value="Delete">
+  </form>
+</main>
+<footer>
+
+</footer>
+</body>
+</html>

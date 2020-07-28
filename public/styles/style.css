@@ -1,0 +1,54 @@
+body{
+    background-color: aqua;
+}
+
+.main-container{
+    display: flex;
+    flex-wrap: wrap;
+  
+}
+
+.joke-container{
+  
+    width: 220px;
+    height: 232px;
+    border: solid black 1px;
+    margin: 25px;
+    text-align: center;
+    background: lightblue;
+}
+header{
+    background-color: lightcoral;
+    text-align: center;
+}
+header h1{
+    background-color: purple;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color :white;
+    border: solid black ;
+    width: 100%;
+  }
+  
+  li {
+    float: left;
+    padding: 5px;
+    margin-left: 15%;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: white;
+  }

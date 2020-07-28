@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Jokes for programmers </h1>
+        <ul> 
+            <a href="/"> <li>Home</li> </a> 
+            <a href="favoriteJokes"> <li>Favorite jokes</li> </a> 
+            <a href="/randomJoke"> <li> Random Joke</li> </a> 
+        
+        </ul>
+    </header>
+    <main>
+
+        <div class="main-container">
+            <% data.forEach(val=>{ %>
+            <div class="joke-container">
+                <h3> <%= val.type%> </h3>
+                <h4> <%= val.setup %> </h4>
+                <h4> <%=val.punchline%> </h4>
+                <form action="/addToFav" method="GET">
+                    <input type="hidden" name="type" value="<%=val.type%>">
+                    <input type="hidden" name="setup" value="<%=val.setup%>">
+                    <input type="hidden" name="punchline" value="<%=val.punchline%>">
+                    <input type="submit" value="Add to fav">
+                </form>
+
+            </div>
+            <%  }); %>
+        </div>
+
+    </main>
+    <footer></footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+   var count =1;
+for (let index = 0; index <= 10; index++) {
+    $(".numberHolder").html(`Joke # ${$('.nunmberHolder').index()}`);
+    count++;
+}
+   
+   
+</script>
+</body>
+
+</html>
